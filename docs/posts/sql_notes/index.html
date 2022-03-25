@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+		
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>SQL Notes &middot; Jingxin&#39;s Blog</title>
+
+		
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" href="favicon.ico" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="Jingxin&#39;s Blog" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					
+						<h2 class="nav-title">Jingxin&#39;s Blog</h2>
+					
+				</a>
+				<ul>
+    
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        
+        <br>
+        <span>on&nbsp;</span><time datetime="2022-03-25 15:59:48 -0700 PDT">March 25, 2022</time>
+</div>
+
+		<h1 class="post-title">SQL Notes</h1>
+<div class="post-line"></div>
+
+		
+
+		<h3 id="from---where---as-excuting-order"><code>FROM -&gt; WHERE -&gt; AS</code> Excuting Order</h3>
+<ul>
+<li>Why the defined colmn name cannot be used in <code>WHERE</code> clause? Because the <code>col AS new_col</code> is excuted after <code>WHERE</code>. The excuting order in the follow SQL is <code>FROM -&gt; WHERE -&gt; AS</code>:</li>
+</ul>
+<pre tabindex="0"><code>SELECT col AS new_col
+FROM table
+WHERE col &lt; 10
+</code></pre><h3 id="exists-operator"><code>EXISTS</code> operator</h3>
+<ul>
+<li>The <code>EXISTS</code> operator is used to test for the existence of any record in a subquery, it returns <code>TRUE</code> if the subquery returns one or more rows. <code>EXISTS ()</code> The subquery within the bracket after <code>EXISTS</code> can be treated as a function <code>f(row, table) -&gt; bool</code> to filter the row.</li>
+</ul>
+<pre tabindex="0"><code>SELECT row
+FROM table_a
+WHERE EXISTS f(row, table_b, ...)
+</code></pre><h3 id="null-logic-operator"><code>NULL</code> logic operator</h3>
+<ul>
+<li><code>NULL</code> logic operator: note in normal programming lanugage, any logic operation only has two outputs <code>TRUE</code> and <code>FALSE</code>, <code>NULL</code> is treated as <code>False</code>, but this is different in SQL, the logic output has three results: <code>TRUE</code>, <code>FALSE</code>, and <code>NULL</code>
+<ul>
+<li><code>a is NULL</code> and <code>a is not NULL</code> can be inferred by normal logic, which returns <code>True</code> or <code>False</code></li>
+<li>any comparison operator with <code>NULL</code> will be <code>NULL</code>, example like <code>a = NULL</code> is <code>NULL</code>, even in the case  <code>a = NULL</code></li>
+<li><code>TRUE or NULL</code> is <code>TRUE</code>, since the second expression wont get a chance to be evaluated.</li>
+<li><code>FALSE or NULL</code> is <code>NULL</code></li>
+</ul>
+</li>
+</ul>
+
+
+		
+	</div>
+
+	<div class="pagination">
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			
+			<span>
+			&copy; <time datetime="2022-03-25 16:13:45.470773 -0700 PDT m=&#43;0.049355448">2022</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>
