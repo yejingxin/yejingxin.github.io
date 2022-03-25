@@ -1,0 +1,4 @@
+baseURL = 'http://yejingxin.github.io/'
+languageCode = 'en-us'
+title = "Jingxin's Blog"
+theme = 'tale'
