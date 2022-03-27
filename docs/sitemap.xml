@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://yejingxin.github.io/about/</loc>
+    <lastmod>2022-03-27T00:13:27+00:00</lastmod>
+  </url><url>
     <loc>http://yejingxin.github.io/</loc>
     <lastmod>2022-03-25T15:59:48-07:00</lastmod>
   </url><url>
@@ -14,5 +17,7 @@
     <loc>http://yejingxin.github.io/categories/</loc>
   </url><url>
     <loc>http://yejingxin.github.io/tags/</loc>
+  </url><url>
+    <loc>http://yejingxin.github.io/archives/</loc>
   </url>
 </urlset>

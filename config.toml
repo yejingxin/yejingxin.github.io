@@ -1,6 +1,27 @@
 baseURL = 'http://yejingxin.github.io/'
 languageCode = 'en-us'
 title = "Jingxin's Blog"
-theme = 'tale'
+theme = 'maupassant' # 'tale'
 publishDir = 'docs'
 contentDir = 'content/'
+
+## 配置代码高亮
+[markup]
+  [markup.highlight]
+    lineNos = true
+    style = "github"
+
+## 配置网站菜单
+
+[menu]
+
+[[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    url = "/archives/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3

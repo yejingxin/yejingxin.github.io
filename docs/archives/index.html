@@ -7,21 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
-    <title>Posts | Jingxin&#39;s Blog</title>
-    <meta property="og:title" content="Posts - Jingxin&#39;s Blog">
+    <title>归档 | Jingxin&#39;s Blog</title>
+    <meta property="og:title" content="归档 - Jingxin&#39;s Blog">
     <meta property="og:type" content="article">
         
         
     <meta name="Keywords" content="">
-    <meta name="description" content="Posts">
+    <meta name="description" content="Android资深工程师 ，Go和Java打杂师，《Android Gradle权威指南》作者，Android官方技术文档译者">
         
     <meta name="author" content="">
-    <meta property="og:url" content="http://yejingxin.github.io/posts/">
+    <meta property="og:url" content="http://yejingxin.github.io/archives/">
     <link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
     <link rel="stylesheet" href='/css/style.css'>
-    <link rel="alternate" type="application/rss+xml" href="http://yejingxin.github.io/posts/index.xml" title="Jingxin's Blog" />
     <script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     
@@ -48,7 +47,7 @@
                 <nav id="nav-menu" class="clearfix">
                     <a class="" href="http://yejingxin.github.io/">Main</a>
                     
-                    <a  href="http://yejingxin.github.io/archives/" title="Archives">Archives</a>
+                    <a class="current" href="http://yejingxin.github.io/archives/" title="Archives">Archives</a>
                     
                     <a  href="http://yejingxin.github.io/about/" title="About">About</a>
                     
@@ -64,31 +63,18 @@
 
                 <div class="col-8" id="main">
                     
-<div class="res-cons">
+<div class="post-archive">
     
-    
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="http://yejingxin.github.io/posts/sql_notes/" title="SQL Notes">SQL Notes</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2022-3-25
-        </date>
+    <h2>2022</h2>
+    <ul class="listing">
         
-        <div class="post-content">
-            FROM -&gt; WHERE -&gt; AS Excuting Order  Why the defined colmn name cannot be used in WHERE clause? Because the col AS new_col is excuted after WHERE. The excuting order in the follow SQL is FROM -&gt; WHERE -&gt; AS:  SELECT col AS new_col FROM table WHERE col &lt; 10 EXISTS operator  The EXISTS operator is used to test for the existence of any record in a subquery, it returns TRUE if the subquery returns one or more rows.……
-        </div>
-        <p class="readmore"><a href="http://yejingxin.github.io/posts/sql_notes/">ReadMore</a></p>
-    </article>
+        <li>
+            <span class="date">2022/03/25</span>
+            <a href="http://yejingxin.github.io/posts/sql_notes/" title="SQL Notes">SQL Notes</a>
+        </li>
+        
+    </ul>
     
-    
-    
-
-
-
-
 
 </div>
 
@@ -109,6 +95,16 @@
 </footer>
 
 
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 <a id="rocket" href="#top"></a>
 <script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
