@@ -3,8 +3,8 @@ title: "SQL Notes"
 date: 2022-03-25T15:59:48-07:00
 ---
 
-### `FROM -> WHERE -> AS` Excuting Order
- - Why the defined colmn name cannot be used in `WHERE` clause? Because the `col AS new_col` is excuted after `WHERE`. The excuting order in the follow SQL is `FROM -> WHERE -> AS`:
+### `FROM -> WHERE -> AS` Executing Order
+ - Why the defined column name cannot be used in `WHERE` clause? Because the `col AS new_col` is executed after `WHERE`. The executing order in the follow SQL is `FROM -> WHERE -> AS`:
  ```
  SELECT col AS new_col
  FROM table
@@ -18,8 +18,8 @@ date: 2022-03-25T15:59:48-07:00
  WHERE EXISTS f(row, table_b, ...)
  ```
  ### `NULL` logic operator
-  - `NULL` logic operator: note in normal programming lanugage, any logic operation only has two outputs `TRUE` and `FALSE`, `NULL` is treated as `False`, but this is different in SQL, the logic output has three results: `TRUE`, `FALSE`, and `NULL`
+  - `NULL` logic operator: note in normal programming language, any logic operation only has two outputs `TRUE` and `FALSE`, `NULL` is treated as `False`, but this is different in SQL, the logic output has three results: `TRUE`, `FALSE`, and `NULL`
     - `a is NULL` and `a is not NULL` can be inferred by normal logic, which returns `True` or `False`
-    - any comparison operator with `NULL` will be `NULL`, example like `a = NULL` is `NULL`, even in the case  `a = NULL`
-    - `TRUE or NULL` is `TRUE`, since the second expression wont get a chance to be evaluated.
+    - any comparison operator with `NULL` will be `NULL`, example like `a = NULL` is `NULL`, even in the case `a = NULL`
+    - `TRUE or NULL` is `TRUE`, since the second expression won't get a chance to be evaluated.
     - `FALSE or NULL` is `NULL`
